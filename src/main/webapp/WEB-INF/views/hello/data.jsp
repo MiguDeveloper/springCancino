@@ -27,6 +27,34 @@
             <p>Correo: ${correo}</p>
             <p>Edad: ${edad}</p>
         </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-8">
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombres</th>
+                    <th>Correo</th>
+                    <th>edad</th>
+                    <th>Acciones</th>
+                </tr>
+                </thead>
+                <tbody>
+                <c:forEach items="${lstPersonas}" var="persona">
+                    <tr>
+                        <td>${persona.id}</td>
+                        <td>${persona.nombres}</td>
+                        <td>${persona.correo}</td>
+                        <td>${persona.edad}</td>
+                        <td>Actualizar, Ver</td>
+                    </tr>
+                </c:forEach>
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <hr>
