@@ -1,11 +1,7 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: miguelchinchay
-  Date: 23/03/18
-  Time: 00:25
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!doctype html>
 <html lang="es">
@@ -74,6 +70,17 @@
             <h2>Heading</h2>
             <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
             <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-4">
+            <form:form modelAttribute="frmPersona">
+                <form:select path="pais" cssClass="form-control">
+                    <form:option value="">Seleccione...</form:option>
+                    <form:options items="${lstPaises}"></form:options>
+                </form:select>
+            </form:form>
         </div>
     </div>
 
